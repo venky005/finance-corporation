@@ -1,0 +1,47 @@
+<HTML>
+<HEAD>
+<TITLE> Employee Information </TITLE>
+<LINK href="dyn.xsl" rel="stylesheet">
+</HEAD>
+<BODY BGCOLOR="#FFFFFF">
+<script src="validate.js"></script>
+
+<form action="./emp_info.jsp" method=post onsubmit="return validate(this)">  
+<center>
+<span id=heading>EMPLOYEE INFORMATION</span>
+<BR>
+<BR>
+<fieldset><legend>Employee Information</legend><BR><TABLE>
+<TR>
+	<TD>Employee No</TD>
+	<TD><INPUT TYPE="text" NAME="eno" maxlength=5 onkeypress="return blockkey(this)"></TD>
+</TR><TR>
+	<TD>Employee Name</TD>
+	<TD><INPUT TYPE="text" NAME="ename" maxlength=15></TD>
+</TR>
+<TR>
+	<TD>Designation</TD>
+	<TD><INPUT TYPE="text" NAME="desig" maxlength=15></TD>
+</TR><TR>
+	<TD>Monthly Salary</TD>
+	<TD><INPUT TYPE="text" NAME="msal" maxlength=8 onkeypress="return blockkey(this)"></TD>
+</TR><TR>
+	<TD>Address</TD>
+	<TD><INPUT TYPE="text" NAME="addr" maxlength=50></TD>
+</TR><TR>
+	<TD>Phone</TD>
+	<TD><INPUT TYPE="text" NAME="phno" maxlength=12 onkeypress="return blockkey(this)"></TD>
+</TR>
+
+</TR>
+<tr>
+</tr>
+<TR>
+<TD colspan=2 align=center><BR><button TYPE="Submit" accesskey="S"><u>S</u>ave It</button>&nbsp;&nbsp;
+<button TYPE="Reset" accesskey="R"><u>R</u>efresh</button></TD>
+<tr>
+</TABLE>
+</form></fieldset>
+</center>
+</BODY>
+</HTML>

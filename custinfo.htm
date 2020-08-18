@@ -1,0 +1,55 @@
+<HTML>
+<HEAD>
+<TITLE> Customer Information </TITLE>
+<LINK href="dyn.xsl" rel="stylesheet">
+</HEAD>
+<BODY BGCOLOR="green">
+<script src="validate.js"></script>
+<form action="./cust_info.jsp" method=post onsubmit="return validate(this)"> 
+<center>
+<span id=heading>CUSTOMER INFORMATION</span>
+<BR>
+<BR>
+<fieldset><legend>Customer Information</legend><BR>
+<TABLE>
+
+<TR>
+	<TD>Customer Code</TD>
+	<TD><INPUT TYPE="text" NAME="custcode" maxlength=5 onkeypress="return blockkey(this)"></TD>
+</TR><TR>
+	<TD>Customer Name</TD>
+	<TD><INPUT TYPE="text" NAME="custname" maxlength=30></TD>
+</TR>
+</TR><TR>
+	<TD>Organization Name</TD>
+	<TD><INPUT TYPE="text" NAME="orgname" maxlength=15></TD>
+</TR>
+
+<TR>
+	<TD>Scale</TD>
+	<TD><INPUT TYPE="text" NAME="scale" maxlength=30></TD>
+</TR><TR>
+	<TD>Annual Turnover</TD>
+	<TD><INPUT TYPE="text" NAME="annsal" maxlength=5  onkeypress="return blockkey(this)"></TD>
+</TR><TR>
+	<TD>Address</TD>
+	<TD><INPUT TYPE="text" NAME="addr" maxlength=15></TD>
+</TR><TR>
+	<TD>Phone</TD>
+	<TD><INPUT TYPE="text" NAME="phno" maxlength=15 onkeypress="return blockkey(this)"></TD>
+</TR>
+<TR>
+	<TD>ZIP</TD>
+	<TD><INPUT TYPE="text" NAME="zip" maxlength=7  onkeypress="return blockkey(this)"></TD>
+</TR>
+</TR>
+<TR>
+<TD colspan=2 align=center><BR><button TYPE="Submit" accesskey="S"><u>S</u>ave It</button>&nbsp;&nbsp;
+<button TYPE="Reset" accesskey="R"><u>R</u>efresh</button></TD>
+<tr>
+
+</TABLE>
+</center>
+</form>
+</BODY>
+</HTML>

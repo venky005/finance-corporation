@@ -1,0 +1,80 @@
+<body bgcolor=ivory scroll=no>
+<LINK HREF="switch.xsl" rel="stylesheet">
+<script>
+document.oncontextmenu=new Function("return false");
+document.onselectstart=new Function("return false");
+var persistmenu="yes" 
+var persisttype="sitewide"
+if (document.getElementById){ 
+document.write('<style type="text/css">\n')
+document.write('.submenu{display: none;}\n')
+document.write('</style>\n')
+}
+function getLoad() {
+var anc=document.getElementsByTagName("A");
+ for(an=0;an<anc.length;an++) {
+ anc[an].onmouseover=function() {status=this.innerHTML;return true;}
+ anc[an].onmouseout=function() {status="Done";return true;}
+ anc[an].onfocus=function() {status=this.innerHTML;this.blur();return true;}
+ anc[an].oncontextmenu=function() {
+                             var cfm=confirm("Would u like to open this link in New Window");
+                             if(cfm) open(this.href);
+                             else return;
+                                  }
+}
+}
+function SwitchMenu(obj){
+	if(document.getElementById){
+	var el = document.getElementById(obj);
+	var ar = document.getElementById("masterdiv").getElementsByTagName("span"); 		if(el.style.display != "block"){ 
+			for (var i=0; i<ar.length; i++){
+				if (ar[i].className=="submenu") 
+				ar[i].style.display = "none";
+			}
+			el.style.display = "block";
+		}else{
+			el.style.display = "none";
+		}
+	}
+}
+function getReports(url) {
+var mw=screen.availWidth-50;
+var mh=screen.availHeight-50;
+open(url,"reportss","scrollbars,width="+mw+",height="+mh+",left=20,top=20,maximize=yes");
+}
+
+</script>
+	
+<div id="masterdiv">
+
+	<div class="menutitle" onclick="SwitchMenu('sub4')">Home</div>
+	<span class="submenu" id="sub4">
+		&nbsp;&nbsp;&nbsp;&nbsp;<font face=webdings color=lightslategray>4</font> <a href="index.htm" target="_parent">Home Page</a><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;<font face=webdings color=lightslategray>4</font> <a href="javascript:parent.close()">Terminal</a><br>
+	</span>
+<div class="menutitle" onclick="parent.location='about.htm'">About Us</div>
+	<div class="menutitle" onclick="SwitchMenu('sub1')">Administration</div>
+	<span class="submenu" id="sub1">
+		&nbsp;&nbsp;&nbsp;&nbsp;<font face=webdings color=lightslategray>4</font> <a href="empdet.htm" target="right">Employee Details</a><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;<font face=webdings color=lightslategray>4</font> <a href="loan.htm" target="right">Loan Details</a><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;<font face=webdings color=lightslategray>4</font> <a href="custinfo.htm" target="right">Customer Details</a><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;<font face=webdings color=lightslategray>4</font> <a href="intmast.jsp" target="right">Interest Rates</a><BR>
+		&nbsp;&nbsp;&nbsp;&nbsp;<font face=webdings color=lightslategray>4</font> <a href="trans_read.jsp"  target="right">Customer Loan</a><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;<font face=webdings color=lightslategray>4</font> <a href="payment.jsp" target="right">Payment Details</a>
+		<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;<font face=webdings color=lightslategray>4</font> <a href="NewCutomer.jsp" target="right">Online Users</a>
+	</span>
+
+	<div class="menutitle" onclick="parent.location='transaction_enter.jsp'">Transactions</div>
+	<div class="menutitle" onclick="SwitchMenu('sub3')">Reports Terminal</div>
+	<span class="submenu" id="sub3">
+		&nbsp;&nbsp;&nbsp;&nbsp;<font face=webdings color=lightslategray>4</font> <a href="javascript:getReports('report?table=apsfc_customer')">Customers</a><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;<font face=webdings color=lightslategray>4</font> <a href="javascript:getReports('report?table=apsfc_cust_loan')">Customer Loans</a><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;<font face=webdings color=lightslategray>4</font> <a href="javascript:getReports('report?table=apsfc_emp')">Employee</a><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;<font face=webdings color=lightslategray>4</font> <a href="javascript:getReports('report?table=apsfc_int')">Interest</a><BR>
+		&nbsp;&nbsp;&nbsp;&nbsp;<font face=webdings color=lightslategray>4</font> <a href="javascript:getReports('report?table=apsfc_payment')">Payment</a><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;<font face=webdings color=lightslategray>4</font> <a href="javascript:getReports('report?table=apsfc_loan_mstr')">Loan Master</a>
+	</span>
+</div>
+<div class="menutitle" onclick="parent.location='logout.htm'">Logout</div>
+<script>getLoad()</script>

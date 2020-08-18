@@ -1,0 +1,60 @@
+<body bgcolor=ivory scroll=no>
+<LINK HREF="switch.xsl" rel="stylesheet">
+<script>
+document.oncontextmenu=new Function("return false");
+document.onselectstart=new Function("return false");
+var persistmenu="yes" 
+var persisttype="sitewide"
+if (document.getElementById){ 
+document.write('<style type="text/css">\n')
+document.write('.submenu{display: none;}\n')
+document.write('</style>\n')
+}
+function getLoad() {
+var anc=document.getElementsByTagName("A");
+ for(an=0;an<anc.length;an++) {
+ anc[an].onmouseover=function() {status=this.innerHTML;return true;}
+ anc[an].onmouseout=function() {status="Done";return true;}
+ anc[an].onfocus=function() {status=this.innerHTML;this.blur();return true;}
+ anc[an].oncontextmenu=function() {
+                             var cfm=confirm("Would u like to open this link in New Window");
+                             if(cfm) open(this.href);
+                             else return;
+                                  }
+}
+}
+function SwitchMenu(obj){
+	if(document.getElementById){
+	var el = document.getElementById(obj);
+	var ar = document.getElementById("masterdiv").getElementsByTagName("span"); 		if(el.style.display != "block"){ 
+			for (var i=0; i<ar.length; i++){
+				if (ar[i].className=="submenu") 
+				ar[i].style.display = "none";
+			}
+			el.style.display = "block";
+		}else{
+			el.style.display = "none";
+		}
+	}
+}
+
+</script>
+	
+<div id="masterdiv">
+
+	<div class="menutitle" onclick="SwitchMenu('sub4')">Home</div>
+	<span class="submenu" id="sub4">
+		&nbsp;&nbsp;&nbsp;&nbsp;<font face=webdings color=lightslategray>4</font> <a href="custindex.htm" target="_parent">Home Page</a><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;<font face=webdings color=lightslategray>4</font> <a href="javascript:parent.close()">Terminal</a><br>
+	</span>
+<div class="menutitle" onclick="parent.location='about.htm'">About Us</div>
+	<div class="menutitle" onclick="SwitchMenu('sub1')">Information</div>
+	<span class="submenu" id="sub1">
+		&nbsp;&nbsp;&nbsp;&nbsp;<font face=webdings color=lightslategray>4</font> <a href="cust_loandet.jsp" target="right">Loan Details</a><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;<font face=webdings color=lightslategray>4</font> <a href="cust_intmast.jsp" target="right">Interest Rates</a><BR>
+		&nbsp;&nbsp;&nbsp;&nbsp;<font face=webdings color=lightslategray>4</font> <a href="cust_custloan.htm"  target="right">Customer Loan</a><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;<font face=webdings color=lightslategray>4</font> <a href="cust_custpmt.htm" target="right">Payment Details</a>
+	</span>
+<div class="menutitle" onclick="parent.location='cust_pmt.jsp'">Payment</div>
+<div class="menutitle" onclick="parent.location='logout.htm'">Logout</div>
+</div><script>getLoad()</script>

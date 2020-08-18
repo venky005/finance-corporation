@@ -1,0 +1,33 @@
+<HTML>
+<HEAD>
+<TITLE> New Document </TITLE>
+<LINK href="dyn.xsl" rel="stylesheet">
+</HEAD>
+<BODY BGCOLOR="green">
+<script src="validate.js"></script>
+<form action="./loan_mst.jsp" method=post onsubmit="return validate(this);">  
+<center>
+<span id=heading>LOAN MASTER</span>
+<BR>
+<BR>
+<fieldset><legend>Loan Master</legend><BR>
+<TABLE>
+
+<TR>
+	<TD>Loan Code</TD>
+	<TD><INPUT TYPE="text" NAME="lncode" maxlength=5 onkeypress="return blockkey(this)"></TD>
+</TR><TR>
+	<TD>Loan Description</TD>
+	<TD><INPUT TYPE="text" NAME="lndesc" maxlength=30></TD>
+</TR>
+<tr>
+</tr>
+<TR>
+<TD colspan=2 align=center><BR><button TYPE="Submit" accesskey="S"><u>S</u>ave It</button>&nbsp;&nbsp;
+<button TYPE="Reset" accesskey="R"><u>R</u>efresh</button></TD>
+<tr>
+</TABLE>
+</center>
+</form>
+</BODY>
+</HTML>

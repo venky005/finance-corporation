@@ -1,0 +1,30 @@
+<HTML>
+<HEAD>
+<TITLE> New Document </TITLE>
+<LINK href="dyn.xsl" rel="stylesheet">
+</HEAD>
+<BODY BGCOLOR="#FFFFFF">
+<script src="validate.js"></script>
+<form action="./cust_custpmt.jsp" method=post onsubmit="return validate(this);"> 
+<center>
+<span id=heading>PAYMENT INFORMATION</span>
+<BR>
+<BR>
+<fieldset><legend>Payment Details</legend><BR>
+<TABLE>
+
+<TR>
+	<TD>Loan no</TD>
+	<TD><INPUT TYPE="text" NAME="loanno" maxlength=5 onkeypress="return blockkey(this)"></TD>
+</TR>
+<tr>
+</tr>
+<TR>
+<TD colspan=2 align=center><BR><button TYPE="Submit" accesskey="S"><u>S</u>ubmit</button>&nbsp;&nbsp;
+<button TYPE="Reset" accesskey="R"><u>R</u>efresh</button></TD>
+<tr>
+</TABLE>
+</center>
+</form>
+</BODY>
+</HTML>

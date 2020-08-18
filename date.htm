@@ -1,0 +1,42 @@
+<body><form onsubmit="return checkDate(this);">
+<input name=day maxlength=2 size=3>
+<select name=month></select>
+<select name=year></select>
+<input type=submit></form>
+<SCRIPT>
+  var mths=["Jan","Feb","Mar","Apr","May","June","Jul","Aug","Sep","Oct","Nov","Dec"];
+  var vals=[31,28,31,30,31,30,31,31,30,31,30,31];
+  function  getMonths() {
+  madd=document.forms[0].month;
+  for(k=0;k<12;k++)
+  madd.options[madd.options.length]=new Option(mths[k],mths[k]);
+  }
+  function getYears() {
+  lt=new Date().getYear();
+  dt=new Date();
+  document.write(dt.getDate()+"   "+dt.getDay()+"   "+dt.getMonth()+"   "+dt.getYear()+"  " +dt.getHours());
+  yadd=document.forms[0].year;
+  for(i=1900;i<lt+1;i++)
+  yadd.options[yadd.options.length]=new Option(i,i);
+  }
+  getMonths();getYears();
+  function checkDate(frm) {
+  var dy=(frm.day.value!="")?frm.day.value:32;
+  var mth=frm.month.options[frm.month.selectedIndex].value.toLowerCase();
+  var yr=frm.year.options[frm.year.selectedIndex].value;
+  if(mth.indexOf('feb')!=-1&&yr%4==0&&dy>29) {
+  alert("Leap Year Enter Valid Day");
+  frm.day.focus();
+  return false;
+  } else if(mth.indexOf('feb')!=-1 && yr%4 != 0 && dy>28) {
+  alert("Enter Valid Day");
+  frm.day.focus();return false;
+ } else {
+          for(i=0;i<vals.length;i++) {
+           if(mth==mths[i].toLowerCase() && mth!="feb") {
+                  	   if(dy>vals[i]) {alert("Proper date");return false;}
+                                        }  
+                                   }
+        }
+ }
+ </script>
