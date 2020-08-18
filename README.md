@@ -1,15 +1,16 @@
 # finance-corporation
 Abstract 
-The system mainly deals with the automation of the activities performed at  Finance Corporation (FC), which issued various kinds of loans to their Customers and accepts monthly installments from them.
-All the master information is gathered pertaining to the employees working in the organization, Industries to whom the loans are issued.  Different types of loans available are designed and the interest rates applicable are set in the master tables.
-Initially after registering the customer, loan is sanctioned according to his requirement and eligibility.  Details of a particular loan are gathered such as loan number, customer number, loan code, amount, interest, and number of months, monthly installment and date of sanction.
-When the Industries pay the loan installments, details of loan number, payment id, amount and date of payment are gathered and stored.
-Simply choosing the appropriate menus such as Employee details report, Customer details report, generates various reports, Loans detail report, Interest report, Customer-loan details report & Payment details report.
-The system security is taken care of by a login form, which is allows only authorized users to utilize the system.
-The main aim/objective is to develop an effective system, which is fast, accurate, consistent, reliable, and flexible enough so that it can accommodate any further expansion.
+-->The system mainly deals with the automation of the activities performed at  Finance Corporation (FC), which issued various kinds of loans to their Customers and accepts monthly installments from them.
+-->All the master information is gathered pertaining to the employees working in the organization, Industries to whom the loans are issued.  Different types of loans available are designed and the interest rates applicable are set in the master tables.
+-->Initially after registering the customer, loan is sanctioned according to his requirement and eligibility.  Details of a particular loan are gathered such as loan number, customer number, loan code, amount, interest, and number of months, monthly installment and date of sanction.
+-->When the Industries pay the loan installments, details of loan number, payment id, amount and date of payment are gathered and stored.
+-->Simply choosing the appropriate menus such as Employee details report, Customer details report, generates various reports, Loans detail report, Interest report, Customer-loan details report & Payment details report.
+-->The system security is taken care of by a login form, which is allows only authorized users to utilize the system.
+-->The main aim/objective is to develop an effective system, which is fast, accurate, consistent, reliable, and flexible enough so that it can accommodate any further expansion.
 
-IDENTIFICATION OF NEED
-Every thing is done manually at present such as customer registration, issuing loans and keeping track of payments.
+IDENTIFICATION OF NEED:
+
+-->Every thing is done manually at present such as customer registration, issuing loans and keeping track of payments.
 As the number of customers is high and the risk involved in the transactions due to huge amount involved, the manual system was considered to be inefficient due to huge amount involved, the manual system was considered to be inefficient due to the volume of errors & lesser security.
 First when a customer comes to the company he has to be registered and in the manual system it is difficult to verify whether he is already registered.  But in the computerized package it would be very easier to check all the customer details.
 When a loan is sanctioned to a customer, calculation of monthly installment is done manually in old system, which may result in wrong monthly installments.  Where as in the automated system, it is exactly calculated according to the number of months and the interest rates applicable.
@@ -21,15 +22,15 @@ The current project integrates the following and centralizes all the activities 
 MASTER INFORMATION MODULE:  
 
 This module gathers all the master information regarding:
-	The employees working in the firm such as employee number, name, organization, designation, monthly salary and address.
-	Industries who take loans from the firm such as customer number, name, organization, designation, monthly salary and address.
-	Various types of loans available with loan code and description.
-	Different categories of interest rates applicable for loan amount with interest code and rate of interest.
-	Users maintenance details such as user name and password.
+->The employees working in the firm such as employee number, name, organization, designation, monthly salary and address.
+->Industries who take loans from the firm such as customer number, name, organization, designation, monthly salary and address.
+->Various types of loans available with loan code and description.
+->Different categories of interest rates applicable for loan amount with interest code and rate of interest.
+->Users maintenance details such as user name and password.
 
 
 LOANS MANAGEMENT MODULE:  
-	Firstly after registering the customer, loan is sanctioned according to his requirements and eligibility.  Details of a particular loan are gathered such as loan number, customer number, loan code, amount, interest, number of months, monthly installment and date of sanction.
+->Firstly after registering the customer, loan is sanctioned according to his requirements and eligibility.  Details of a particular loan are gathered such as loan number, customer number, loan code, amount, interest, number of months, monthly installment and date of sanction.
 
 REPORT GENERATION MODULE:  
 
